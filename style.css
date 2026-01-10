@@ -223,6 +223,10 @@ section:not(.hero) {
   transform: scale(1.2);
 }
 
+li .project-card {
+
+opacity: 100%;
+}
 
 form {
   display: flex;
