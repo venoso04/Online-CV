@@ -1,4 +1,3 @@
-
 document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault(); // prevent default form submission
 
@@ -11,14 +10,27 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     return;
   }
 
-  emailjs.sendForm('service_j76jo4v', 'template_dohgg89', this)
-    .then(() => {
-      console.log("SUCCESS", res.status, res.text);
+
+  const submitBtn = this.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+
+
+  const form = this;
+
+  emailjs.sendForm('service_j76jo4v', 'template_dohgg89', form)
+    .then((res) => {
+      console.log("SUCCESS", res.status);
       alert("Message Sent Successfully!");
-      this.reset(); // clear form
+      form.reset(); // clear form
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     })
     .catch((err) => {
-      console.error(err);
+      console.error("Error:", err);
       alert("Failed to send message. Please try again.");
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     });
 });
