@@ -5,33 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sara | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"  rel="stylesheet">
+
+
 </head>
 <body>
-    <header>
-        <nav>
-            <h2 class="logo">Sara</h2>
+<div class="hero-wrapper">
+  <header>
+<a href="#home" class="logo">
+  <img src="imgs/spark.svg" alt="logo">
+</a>
+    <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contacts">Contact</a></li>            
-            </ul>
-        </nav>
-    </header>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="home" class="hero">
-        <h1>Hello, Im Sara Tarek Badr</h1>
-        <p>I design systems and build websites </p>
-    </section>
+  <section id="home" class="hero">
+
+    <h1 class="decorative">I'm Sara Tarek</h1>
+    <p class="decorative">Backend Developer experienced in building scalable systems, REST APIs, and integrating AI-powered features. Solid
+foundation in system analysis, RESTFull APIS and database design. Open to learning any stack and currently expanding into
+Java Spring Boot</p>
+  </section>
+</div>
+
 
     <section id="about">
         <h1>About Me</h1>
         <h2>Junior Backend Developer</h2>
-        <p>Backend Developer experienced in building scalable systems, REST APIs, and integrating AI-powered features. Solid
-foundation in system analysis, RESTFull APIS and database design. Open to learning any stack and currently expanding into
-Java Spring Boot.</p>
+        <p> An Egyptian CS Graduate specializing in backend development with a strong foundation in system analysis and database design.  </p>
     </section>
 
+      <section id="skills" class="skills">
+    <h1>Skills</h1>
+    <div class="skills-card">
+      <h2>Technical Skills</h2>
+      <ul class="skills-list">
+        <li>Backend: Node.js, Express.js, REST APIs, WebSockets, Authentication</li>
+        <li>Databases: PostgreSQL, Supabase, MongoDB, MySQL, ERD/SRS Design</li>
+        <li>Tools: Git, GitHub, Postman, Jest, Docker (Basics)</li>
+        <li>Other Tech: Firebase, Supabase Auth, OAuth (Google/Apple), Multer</li>
+        <li>Core Skills: OOP, Clean Code, System Analysis, Documentation</li>
+      </ul>
+      <h2>Soft Skills</h2>
+            <ul class="skills-list">
+              <li>Problem Solving</li>
+              <li>Teamwork</li>
+              <li>Adaptability</li>
+              <li>Time Management</li>
+            </ul>
+        <ul class="skills-list">
+          <li>Languages: English (C1), Arabic (Native)</li>
+        </ul>
+    </div>
+  </section>
     
 
     <section id="projects" class="projects">
@@ -60,15 +96,28 @@ munity for additional support.
                 <a href="#" class="project-link">View project</a>
             </div>
 
-            <img src="imgs/genius-logo.png" alt="Genius logo" class="project-logo">
+            <img src="imgs/spark-svgrepo-com.svg" alt="Genius logo" class="project-logo">
             </div>
 
 
   </section>
 
-<section id="contact">
-  <h1>Contacts</h1>
 
+
+
+<section id="contact">
+  <h1>Contact Me</h1>
+<form id="contact-form">
+  <input type="text" name="name" id="name" placeholder="Your Name" />
+  <input type="email" name="email" id="email" placeholder="Your Email" />
+  <textarea name="message" id="message" placeholder="Your Message"></textarea>
+  <button type="submit">Send</button>
+</form>
+
+</section>
+
+
+  <footer>
   <ul class="contact-links">
     <li>
 
@@ -93,7 +142,11 @@ munity for additional support.
       </a>
     </li>
   </ul>
-</section>
+  </footer>
 
-
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init('2be2kmEvdG17_I77Y');
+  </script>
+    <script> src="script.js" </script>
 </body>
