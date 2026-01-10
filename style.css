@@ -31,6 +31,7 @@ header a {
 header .logo img {
   width: 60px;
   height: auto;
+  
 }
 
 nav {
@@ -50,12 +51,12 @@ nav ul {
 nav a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.2s;
 }
 
 nav a:hover {
-  color: #00bfff;
+  color: #00035c;
 }
 
 .hero-wrapper {
@@ -145,6 +146,7 @@ nav a:hover {
   font-size: 1.5rem;
   color: #fff;
   max-width: 800px;
+  font-weight: 600;
 
 }
 
@@ -196,6 +198,7 @@ section:not(.hero) {
   width: 80px;
   height: 80px;
   object-fit: contain;
+
 }
 
 .contact-links li {
